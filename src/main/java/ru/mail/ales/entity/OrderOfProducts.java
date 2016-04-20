@@ -1,5 +1,6 @@
-package main.java.ru.mail.ales_2003.entity;
+package ru.mail.ales.entity;
 
+import javax.persistence.OneToMany;
 import java.util.Date;
 import java.util.List;
 
@@ -13,7 +14,13 @@ public class OrderOfProducts {
     //дата поступления заказа
     private Date receiptDate;
     //лист товаров в заказе
+
+    //mapping
+
+    @OneToMany(mappedBy = "orderOfProducts")
     private List<ProductsInOrder> productsInOrders;
+
+
 
     //конструкторы
     public OrderOfProducts(Integer orderOfProductsId, Date receiptDate, List<ProductsInOrder> productsInOrders) {

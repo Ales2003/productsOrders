@@ -1,5 +1,6 @@
-package main.java.ru.mail.ales_2003.entity;
+package ru.mail.ales.entity;
 
+import javax.persistence.OneToMany;
 import java.util.List;
 
 /**
@@ -16,6 +17,8 @@ public class Product {
     //опісаніе товара
     private String describtionOfProduct;
     //лист товаров в заказе для внешнего ключа
+
+    @OneToMany(mappedBy = "product")
     private List<ProductsInOrder> productsInOrders;
 
 

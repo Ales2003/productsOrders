@@ -1,4 +1,11 @@
-package main.java.ru.mail.ales_2003.entity;
+package ru.mail.ales.entity;
+
+import ru.mail.ales.entity.Product;
+
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.xml.ws.soap.MTOM;
 
 /**
  * Created by USER on 20.04.2016.
@@ -7,10 +14,22 @@ package main.java.ru.mail.ales_2003.entity;
 public class ProductsInOrder {
     //Id товаров в каказе = ключ
     private Integer id;
+
     //товар
+
+    @ManyToOne
+    @JoinColumn(name = "product_id")
     private Product product;
+
+
     //количество
     private Integer quantityOfProducts;
+
+    //mapping
+
+    @ManyToOne
+    @JoinColumn(name = "order_id")
+    private OrderOfProducts orderOfProducts;
 
 
 
