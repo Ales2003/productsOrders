@@ -1,14 +1,19 @@
 package ru.mail.ales.entity;
 
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
 
 /**
  * Created by USER on 20.04.2016.
  */
+
+
 //класс Заказ товаров
+@Entity
 public class OrderOfProducts {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //номер заказа =ключ
     private Integer id;
     //дата поступления заказа

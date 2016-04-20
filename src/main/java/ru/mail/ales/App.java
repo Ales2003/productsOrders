@@ -16,7 +16,7 @@ public class App
     public static void main( String[] args )
     {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Product product = (Product) session.get(Product.class, id);
+        Product product = (Product) session.get(Product.class, 1);
         session.close();
         System.out.println(product);
 

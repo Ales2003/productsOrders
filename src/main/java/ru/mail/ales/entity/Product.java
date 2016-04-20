@@ -1,13 +1,17 @@
 package ru.mail.ales.entity;
 
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.List;
 
 /**
  * Created by USER on 20.04.2016.
  */
 //класс Товар
+
+@Entity
 public class Product {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Id товара = ключ
     private Integer id;
     //название товара

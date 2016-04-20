@@ -2,16 +2,18 @@ package ru.mail.ales.entity;
 
 import ru.mail.ales.entity.Product;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.xml.ws.soap.MTOM;
 
 /**
  * Created by USER on 20.04.2016.
  */
 //класс Товары в заказе
+
+@Entity
 public class ProductsInOrder {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Id товаров в каказе = ключ
     private Integer id;
 
