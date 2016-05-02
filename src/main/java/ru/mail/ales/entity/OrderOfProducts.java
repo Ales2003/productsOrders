@@ -37,6 +37,10 @@ public class OrderOfProducts {
     public OrderOfProducts() {
     }
 
+    public OrderOfProducts(Object date) {
+
+    }
+
 
     //геттеры и сеттеры
 

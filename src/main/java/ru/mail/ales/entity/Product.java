@@ -36,7 +36,7 @@ public class Product {
         this.describtionOfProduct = describtionOfProduct;
     }
 
-    public Product() {
+    public Product(String productName, String describtion, Integer price) {
     }
 
 
